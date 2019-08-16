@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -36,9 +38,54 @@
     color: #fff;
 }
 
+.info-block {
+    background: #018fc7;
+    padding: 0 15px;
+}
+
+.info-block-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.info-block-content h1 {
+    font-family: 'Shadows Into Light', cursive;
+    color: #fff;
+}
+
+.info-block-amount {
+    display: flex;
+    color: #fff;
+    font-style: italic;
+}
+
+.info-block-amount h3 {
+    margin: 0 10px;
+}
+
+.info-block-content h5 {
+    color: #fff;
+    font-size: 14px;
+}
+
 .blog {
+    height: calc(100vh - 82px - 71px - 60px);
+    overflow: auto;
     padding: 30px;
-    margin-bottom: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.spiner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: calc((100vh - 323px) / 2) auto;
+    border: 5px dotted #018fc7;    
 }
 
 .post {
@@ -84,19 +131,26 @@
     color: #aaaaaa;
 }
 
+.post .like {
+    color: #5a5858;
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+.post .enter-like {
+    color: #df1234;
+}
+
 .form {
     padding: 20px 0;
     background: #339ec9;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 .form textarea {
-    width: 80%;
+    width: 70%;
     margin-right: 25px;
     padding: 5px 10px;
     font-size: 16px;

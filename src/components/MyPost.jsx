@@ -2,17 +2,15 @@ import React from 'react';
 
 class MyPost extends React.Component {
   render() {
-    const post = this.props.post;
-    let d = post.time;
-    const time = `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+    const { post } = this.props;
 
     return (
       <div className="post left">
         <div className="post-content left">
           <p>{post.text}</p>
           <div className="post-content-other">
-            <span className="post-date">{time}</span>
-            <span>&#10084; {post.likeCount}</span>
+            <span className="post-date">{post.created_at}</span>
+            <span><span className="like">&#10084;</span> {post.likeCount}</span>
           </div>
         </div>
       </div>
