@@ -38,6 +38,21 @@ export default function reducer(state = {
           myposts: [action.payload, ...state.myposts]
         }
       }
+      case 'DELETE_POST': {
+        return {
+          ...state,
+          myposts: state.myposts.filter(post => post.created_at !== action.payload)
+        }
+      }
+      case 'UPDATE_POST': {
+        const arr = state.myposts.filter(post => post.created_at !== action.payload.time);
+        const [ post ] = state.myposts.filter(post => post.created_at === action.payload.time);
+        post.text = action.payload.text;
+        return {
+          ...state,
+          myposts: [...arr, post]
+        }
+      }
 
     }
   

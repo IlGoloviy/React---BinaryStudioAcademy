@@ -22,3 +22,17 @@ export function addMyPost(data) {
     payload: data
   }
 }
+
+export function updatePost(time, text) {
+  return {
+    type: 'UPDATE_POST',
+    payload: {time, text}
+  }
+}
+
+export function deletePost(time) {
+  return {
+    type: 'DELETE_POST',
+    payload: time
+  }
+}
