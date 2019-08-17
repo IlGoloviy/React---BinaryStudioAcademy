@@ -36,3 +36,10 @@ export function deletePost(time) {
     payload: time
   }
 }
+
+export function setTimeLastMessage(time) {
+  return {
+    type: 'TIME_LAST_MESSAGE',
+    payload: time
+  }
+}

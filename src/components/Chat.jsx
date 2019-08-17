@@ -6,7 +6,7 @@ import InputForm from './InputForm';
 import MyPost from './MyPost';
 import InfoBlock from './InfoBlock';
 
-import { fetchPosts, setCountMessage } from '../actions/postsAction';
+import { setTimeLastMessage, fetchPosts, setCountMessage } from '../actions/postsAction';
 
 class Chat extends React.Component {
 
@@ -28,6 +28,8 @@ class Chat extends React.Component {
         if (a.props.post.created_at < b.props.post.created_at) return -1;
       });
       this.props.dispatch(setCountMessage(postsList.length));
+      const time = postsList[postsList.length-1].props.post.created_at;
+      this.props.dispatch(setTimeLastMessage(time));
 
       return(
         <>

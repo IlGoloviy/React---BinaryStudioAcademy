@@ -2,6 +2,7 @@ export default function reducer(state = {
     posts: [],
     myposts: [],
     countPosts: 0,
+    timeLastPost: '',
     fetching: false,
     fetched: false,
     error: null
@@ -51,6 +52,12 @@ export default function reducer(state = {
         return {
           ...state,
           myposts: [...arr, post]
+        }
+      }
+      case 'TIME_LAST_MESSAGE': {
+        return {
+          ...state,
+          timeLastPost: action.payload
         }
       }
 
