@@ -1,6 +1,6 @@
 import React from 'react';
 
-class WelcomeModal extends React.Component {
+class Modal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {display: false};
@@ -32,4 +32,4 @@ class WelcomeModal extends React.Component {
   }
 }
 
-export default WelcomeModal;
+export default Modal;
