@@ -1,12 +1,15 @@
 {
-  "name": "lesson_react",
+  "homepage": "http://IlGoloviy.github.io/React-mini_chat",
+  "name": "mini-chat_react",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack --mode development --watch",
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +33,7 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
+    "gh-pages": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
